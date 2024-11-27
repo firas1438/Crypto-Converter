@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Calculator</title>
+    <link rel="stylesheet" href="cryptoconv.css" />
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.0.0/email.min.js"></script>
+
+    <script type="text/javascript">
+      (function() {
+        emailjs.init("IOHveLFy9ViJ2hjn7");
+      })();
+    </script>
+
+    <script src="cryptoconv.js" defer></script>
+  </head>
+  <body>
+    <!--FIRST GRID-->
+    <div class="header">
+      <div class="sides">
+        <a
+          href="https://en.wikipedia.org/wiki/Cryptocurrency"
+          class="logo"
+          target="_blank"
+        >
+          INFO</a
+        >
+      </div>
+      <div class="sides"><a href="#" class="menu"> </a></div>
+      <div class="info">
+        <h1 style="font-size: 47px; font-weight: 500">
+          SIMPLIFY CRYPTOCURRENCY CONVERSIONS
+        </h1>
+        <h3 style="font-size: 20px; font-weight: 500">
+          We convert Crypto into your desired currency effortlessly, ensuring
+          seamless transactions and utmost convenience.
+        </h3>
+        <br /><br /><br />
+        <!--button with onclick event to trigger the scroll-->
+        <a href="javascript:void(0);" class="button" onclick="scrollToHome()"
+          >Convert Now!</a
+        >
+        <!--end button-->
+        <br /><br /><br /><br />
+        <div class="meta">
+          <img
+            src="https://i.ibb.co/2yqv28M/f21-Photo-Room-removebg-preview.png"
+            alt="Author Picture"
+            width="60"
+            height="60"
+          />
+          <br />
+          By
+          <a
+            href="https://www.linkedin.com/in/firas-ben-ali-7b1370312/"
+            target="_b"
+            >Firas Ben Ali</a
+          >
+          on July 14th, 2023
+        </div>
+      </div>
+    </div>
+    <!--SECOND GRID-->
+    <section
+    id="Home"
+    style="
+      background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.12) 10%,
+          rgba(12, 12, 12, 1) 100%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.12) 10%,
+          rgba(12, 12, 12, 1) 100%
+        ),
+        url('https://i.ibb.co/JvHP9z9/4k-bitcoin-c13kfpjbcteawl1z.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    "
+  >
+    <div class="container">
+      <div class="left-section" align="center">
+        <h1>Crypto Converter and Calculator</h1>
+        <p>
+          Our online crypto calculator is designed to provide a seamless and
+          efficient way to convert between various cryptocurrencies instantly.
+          Whether you're a seasoned trader or a crypto enthusiast, this tool
+          allows you to input the amount of one cryptocurrency and instantly
+          see its equivalent in another, ensuring accurate and real-time
+          calculations.
+        </p>
+      </div>
+  
+      <div class="right-section">
+        <div class="converter-card">
+          <h3 style="margin-top: 2px">Convert</h3>
+  
+          <div class="input-group">
+            <label style="color: white" for="fromAmount">From</label>
+            <div class="input-field">
+              <input type="number" id="fromAmount" placeholder="Amount" step="any" />
+              <select id="fromCurrency">
+                <option value="tether">USDT</option>
+                <option value="bitcoin">BTC</option>
+                <option value="ethereum">ETH</option>
+                <option value="litecoin">LTC</option>
+                <option value="solana">SOL</option> 
+                <option value="dogecoin">DOGE</option> 
+                <option value="binancecoin">BNB</option>
+                <option value="cardano">ADA</option>
+                <option value="ripple">XRP</option>
+              </select>
+            </div>
+          </div>
+  
+          <div class="swap-icon" id="swapButton" style="cursor: pointer;">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+  
+          <div class="input-group">
+            <label style="color: white" for="toAmount">To</label>
+            <div class="input-field">
+              <input type="text" id="toAmount" readonly placeholder="Converted Amount" />
+              <select id="toCurrency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="tnd">TND</option>
+              </select>
+            </div>
+          </div>
+  
+          <button class="convert-btn" id="convertButton">Convert</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+    <!--THIRD GRID-->
+    <section
+      id="About"
+      style="
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+          ),
+          url('https://i.ibb.co/JvHP9z9/4k-bitcoin-c13kfpjbcteawl1z.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      "
+    >
+      <div>
+        <h1 style="font-size: 3.5rem">How to use?</h1>
+      </div>
+      <div></div>
+      <div class="kraken-container">
+        <div class="kraken-step">
+          <img src="https://i.ibb.co/5kwMc8j/group-chat.png" alt="STEP1" />
+          <p class="kraken-step-description">
+            Enter the amount you wish to convert in the provided text field.
+            Then, select the currency you want to convert from (e.g., USDT, BTC,
+            ETH) from the dropdown menu.
+          </p>
+        </div>
+
+        <div class="kraken-step">
+          <img src="https://i.ibb.co/DGKNFkC/crypto-currency.png" alt="STEP2" />
+          <p class="kraken-step-description">
+            Choose the currency you want to convert your amount to from the
+            second dropdown menu. You can select from various cryptocurrencies
+            like BTC, USDT, or ETH.
+          </p>
+        </div>
+
+        <div class="kraken-step">
+          <img src="https://i.ibb.co/r2GMycY/crypto.png" alt="STEP3" />
+          <p class="kraken-step-description">
+            Click on the Convert button to see the result of your conversion,
+            which will instantly display the equivalent amount in your chosen
+            currency based on real-time market rates.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--FOURTH GRID-->
+    <section
+      id="Category"
+      style="
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+          ),
+          url('https://i.ibb.co/JvHP9z9/4k-bitcoin-c13kfpjbcteawl1z.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      "
+      align="center"
+    >
+    <br>
+    <h2 style="color: orange; font-size: 3.5rem; margin-top:-20px;">
+      FAQ (Frequently Asked Questions)
+    </h2>
+    
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(1)">
+          What is cryptocurrency?
+        </button>
+        <div class="faq-answer" id="faq-answer-1">
+          Cryptocurrency is a digital or virtual currency that uses cryptography
+          for security. It operates independently of a central authority, like a
+          government or bank.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(2)">
+          Which cryptocurrencies can I convert using this calculator?
+        </button>
+        <div class="faq-answer" id="faq-answer-2">
+          You can convert various popular cryptocurrencies such as Bitcoin,
+          Ethereum, Litecoin, and more.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(3)">
+          Is the cryptocurrency value in real-time?
+        </button>
+        <div class="faq-answer" id="faq-answer-3">
+          Yes, the values are updated in real-time using live market data to
+          ensure accurate conversion rates.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(4)">
+          Do I need to create an account to use the calculator?
+        </button>
+        <div class="faq-answer" id="faq-answer-4">
+          No, you can use the calculator without creating an account. Simply
+          enter the cryptocurrency amount and choose the conversion currency.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(5)">
+          How accurate is the conversion?
+        </button>
+        <div class="faq-answer" id="faq-answer-5">
+          The conversion is based on real-time market data, ensuring high
+          accuracy. However, market volatility can cause slight fluctuations in
+          rates.
+        </div>
+      </div>
+    </section>
+
+    <!--5th GRID-->
+    <section
+    id="Feedback"
+    style="background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.12) 10%,
+            rgba(12, 12, 12, 1) 100%
+        ),
+        url('https://i.ibb.co/JvHP9z9/4k-bitcoin-c13kfpjbcteawl1z.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;">
+    <div>
+        <div class="feedback-description">
+            <h1 class="title" style="color: orange; font-size: 3.5rem; text-align: center">
+                Have a question?
+            </h1>
+            <p class="subtitle" style="text-align: center; font-size: 1.2rem">
+                Leave a message and we will help!
+            </p>
+        </div>
+        <form class="feedback-form" id="feedbackForm">
+          <input
+              type="email"
+              placeholder="Email"
+              class="feedback-form__email"
+              id="user_email"
+              required
+          />
+          <textarea
+              cols="30"
+              class="feedback-form__message"
+              name="text"
+              placeholder="Message"
+              id="user_message"
+              rows="5"
+              required
+          ></textarea>
+          <button class="feedback-form__submit" type="submit">Submit</button>
+      </form>
+      
+      
+    </div>
+</section>
+
+  
+  </body>
+</html>
